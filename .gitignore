@@ -1,4 +1,8 @@
+# files
 .env
 test.py
 test.json
 test.html
+
+# folders
+\__pycache__
