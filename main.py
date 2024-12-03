@@ -20,8 +20,10 @@ async def on_ready():
     print(f'{BOT.user} has connected to Discord!')
 
     await BOT.load_extension("extensions.StabilityAI")
+    await BOT.load_extension("extensions.OpenAI")
 
     print("🟢 | Loaded StabilityAI extension")
+    print("🟢 | Loaded OpenAI extension")
 
     await BOT.tree.sync()
 
