@@ -19,11 +19,13 @@ BOT = commands.Bot(command_prefix="!" , intents=discord.Intents().all())
 async def on_ready():
     print(f'{BOT.user} has connected to Discord!')
 
-    await BOT.load_extension("extensions.StabilityAI")
     await BOT.load_extension("extensions.OpenAI")
+    await BOT.load_extension("extensions.Moderation")
+    await BOT.load_extension("extensions.StabilityAI")
 
-    print("🟢 | Loaded StabilityAI extension")
     print("🟢 | Loaded OpenAI extension")
+    print("🟢 | Loaded Moderation extension")
+    print("🟢 | Loaded StabilityAI extension")
 
     await BOT.tree.sync()
 
